@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inputty</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="dropdown">
+                <label for="industry">Select your industry:</label>
+                <select id="industry" onchange="handleIndustryChange()">
+                    <option value="-">-</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="retail">Retail</option>
+                    <option value="gyms">Gyms</option>
+                    <!-- Add other industry options here -->
+                    <option value="other">Other</option>
+                </select>
+                <div id="otherDropdown" class="hidden">
+                    <label for="otherIndustry">Other Industry:</label>
+                    <input type="text" id="otherIndustry" placeholder="Enter your industry">
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <label for="other1">Select a other1:</label>
+                <select id="other1" onchange="handleother1()">
+                    <option value="-">-</option>
+                    <option value="red">1</option>
+                    <option value="blue">2</option>
+                </select>
+            </div>
+
+            <div class="dropdown">
+                <label for="other2">Select a other2:</label>
+                <select id="other2" onchange="handleother2()">
+                    <option value="-">-</option>
+                    <option value="red">1</option>
+                    <option value="blue">2</option>
+                </select>
+            </div>
+
+            <div class="dropdown">
+                <label for="other3">Select a other3:</label>
+                <select id="other3" onchange="handleother3()">
+                    <option value="-">-</option>
+                    <option value="red">1</option>
+                    <option value="blue">2</option>
+                </select>
+            </div>
+
+
+            <div class="dropdown">
+                <label for="other4">Select a other4:</label>
+                <select id="other4" onchange="handleother4()">
+                    <option value="-">-</option>
+                    <option value="red">1</option>
+                    <option value="blue">2</option>
+                </select>
+            </div>
+
+
+            <div class="dropdown">
+                <label for="other5">Select a other5:</label>
+                <select id="other5" onchange="handleother5()">
+                    <option value="-">-</option>
+                    <option value="red">1</option>
+                    <option value="blue">2</option>
+                </select>
+            </div>
+
+            <button type="button" id="continueBtn" onclick="continueToNextPage()" class="hidden">Continue</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
