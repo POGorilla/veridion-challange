@@ -12,71 +12,53 @@
     <div class="container">
         <form id="form">
             <div class="dropdown">
-                <label for="industry">Select your industry:</label>
-                <select id="industry" onchange="handleIndustryChange()">
+                <label for="location">Select your location:</label>
+                <!-- <select id="location" onchange="handleLocationChange()">
                     <option value="-">-</option>
-                    <option value="bakery">Bakery</option>
-                    <option value="retail">Retail</option>
+                    <option value="bakery">Engineering</option>
+                    <option value="retail">Technology</option>
                     <option value="gyms">Gyms</option>
-                    <!-- Add other industry options here -->
                     <option value="other">Other</option>
-                </select>
-                <div id="otherDropdown" class="hidden">
-                    <label for="otherIndustry">Other Industry:</label>
-                    <input type="text" id="otherIndustry" placeholder="Enter your industry">
-                </div>
+                </select> -->
+                <input type="text" id="location" placeholder="Enter your location" onchange="handleLocationChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="other1">Select a other1:</label>
-                <select id="other1" onchange="handleother1()">
-                    <option value="-">-</option>
-                    <option value="red">1</option>
-                    <option value="blue">2</option>
-                </select>
+                <label for="industry">Select a other1:</label>
+                <input type="text" id="industry" placeholder="Enter your industry" onchange="handleIndustryChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="other2">Select a other2:</label>
-                <select id="other2" onchange="handleother2()">
-                    <option value="-">-</option>
-                    <option value="red">1</option>
-                    <option value="blue">2</option>
-                </select>
+                <label for="employeeCount">Select a other1:</label>
+                <input type="text" id="employeeCount" placeholder="Enter your employee count" onchange="handleEmployeeCountChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="other3">Select a other3:</label>
-                <select id="other3" onchange="handleother3()">
-                    <option value="-">-</option>
-                    <option value="red">1</option>
-                    <option value="blue">2</option>
-                </select>
+                <label for="businessCategory">Select a other1:</label>
+                <input type="text" id="businessCategory" placeholder="Enter your business category" onchange="handleBusinessCategoryChange()" />
             </div>
-
 
             <div class="dropdown">
-                <label for="other4">Select a other4:</label>
-                <select id="other4" onchange="handleother4()">
-                    <option value="-">-</option>
-                    <option value="red">1</option>
-                    <option value="blue">2</option>
-                </select>
+                <label for="estimatedRevenue">Select a other1:</label>
+                <input type="text" id="estimatedRevenue" placeholder="Enter the estimated revenue" onchange="handleEstimatedRevenueChange()" />
             </div>
-
 
             <div class="dropdown">
-                <label for="other5">Select a other5:</label>
-                <select id="other5" onchange="handleother5()">
-                    <option value="-">-</option>
-                    <option value="red">1</option>
-                    <option value="blue">2</option>
-                </select>
+                <label for="keywords">Select a </label>
+                <input type="text" id="keywords" placeholder="Enter the keywords" 
+                    onchange="handleKeywordsChange()" />
             </div>
 
-            <button type="button" id="continueBtn" onclick="continueToNextPage()" class="hidden">Continue</button>
+            <div class="dropdown">
+                <label for="products">Select a </label>
+                <input type="text" id="products" placeholder="Enter the products" 
+                    onchange="handleProductsChange()" />
+            </div>
+
+            <button type="button" id="continueBtn" onclick="handleCriteriasRequests()" class="hidden">Continue</button>
         </form>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 
