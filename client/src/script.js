@@ -1,7 +1,9 @@
 const DEFAULT = '-';
 
 criterias = {
-    location: DEFAULT,
+    country: DEFAULT,
+    region: DEFAULT,
+    city: DEFAULT,
     industry: DEFAULT,
     businessCategory: DEFAULT,
     employeeCount: DEFAULT,
@@ -10,11 +12,24 @@ criterias = {
     products: DEFAULT,
 }
 
-function handleLocationChange() {
-    const locationDropdown = document.getElementById('location');
-    criterias.location = locationDropdown.value;
+function handleCountryChange() {
+    const countryInput = document.getElementById('country');
+    criterias.country = countryInput.value;
     enableContinueButton();
 }
+
+function handleRegionChange() {
+    const regionInput = document.getElementById('region');
+    criterias.region = regionInput.value;
+    enableContinueButton();
+}
+
+function handleCityChange() {
+    const cityInput = document.getElementById('city');
+    criterias.city = cityInput.value;
+    enableContinueButton();
+}
+
 
 function handleIndustryChange() {
     const locationDropdown = document.getElementById('industry');

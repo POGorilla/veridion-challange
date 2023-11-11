@@ -12,7 +12,7 @@
     <div class="container">
         <form id="form">
             <div class="dropdown">
-                <label for="location">Select your location:</label>
+                <label for="country">Country:</label>
                 <!-- <select id="location" onchange="handleLocationChange()">
                     <option value="-">-</option>
                     <option value="bakery">Engineering</option>
@@ -20,37 +20,47 @@
                     <option value="gyms">Gyms</option>
                     <option value="other">Other</option>
                 </select> -->
-                <input type="text" id="location" placeholder="Enter your location" onchange="handleLocationChange()" />
+                <input type="text" id="country" placeholder="Enter your country" onchange="handleCountryChange()" />
+            </div>
+
+            <div class="dropdown region">
+                <label for="Region">Region:</label>
+                <input type="text" id="region" placeholder="Enter your region" onchange="handleRegionChange()" />
+            </div>
+
+            <div class="dropdown city">
+                <label for="City">City:</label>
+                <input type="text" id="city" placeholder="Enter your city" onchange="handleCityChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="industry">Select a other1:</label>
+                <label for="industry">Industry:</label>
                 <input type="text" id="industry" placeholder="Enter your industry" onchange="handleIndustryChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="employeeCount">Select a other1:</label>
+                <label for="employeeCount">Employee Count</label>
                 <input type="text" id="employeeCount" placeholder="Enter your employee count" onchange="handleEmployeeCountChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="businessCategory">Select a other1:</label>
+                <label for="businessCategory">Business Category:</label>
                 <input type="text" id="businessCategory" placeholder="Enter your business category" onchange="handleBusinessCategoryChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="estimatedRevenue">Select a other1:</label>
+                <label for="estimatedRevenue">Estimed Revenue (yearly)</label>
                 <input type="text" id="estimatedRevenue" placeholder="Enter the estimated revenue" onchange="handleEstimatedRevenueChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="keywords">Select a </label>
+                <label for="keywords">Type relevant keywords</label>
                 <input type="text" id="keywords" placeholder="Enter the keywords" 
                     onchange="handleKeywordsChange()" />
             </div>
 
             <div class="dropdown">
-                <label for="products">Select a </label>
+                <label for="products">Products</label>
                 <input type="text" id="products" placeholder="Enter the products" 
                     onchange="handleProductsChange()" />
             </div>
