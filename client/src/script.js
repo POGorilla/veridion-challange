@@ -1,8 +1,8 @@
 const DEFAULT = '-';
 
 criterias = {
-    location: DEFAULT,
-    industry: DEFAULT,
+    country: 'Unites States',
+    industry: 'IT',
     businessCategory: DEFAULT,
     employeeCount: DEFAULT,
     estimatedRevenue: DEFAULT,
@@ -61,20 +61,20 @@ async function handleCriteriasRequests() {
         },
         data: criterias
     });
-    console.log(resp);
+    console.log(resp.data.msg);
 }
 
-function enableContinueButton() {
-    const continueBtn = document.getElementById('continueBtn');
+// function enableContinueButton() {
+//     const continueBtn = document.getElementById('continueBtn');
 
-    let found = false;
-    for (const [_, value] of Object.entries(criterias)) {
-        found |= value === DEFAULT;
-    }
+//     let found = false;
+//     for (const [_, value] of Object.entries(criterias)) {
+//         found |= value === DEFAULT;
+//     }
 
-    if (!found) {
-        continueBtn.classList.remove('hidden');
-    } else {
-        continueBtn.classList.add('hidden');
-    }
-}
+//     if (!found) {
+//         continueBtn.classList.remove('hidden');
+//     } else {
+//         continueBtn.classList.add('hidden');
+//     }
+// }

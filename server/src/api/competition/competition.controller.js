@@ -2,7 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import axios from 'axios'
 
 export const getCompetition = async (req, res) => {
-  const { location, industry } = req.body;
+  const { city, region, country, industry } = req.body;
   const url = process.env.BASE_URL + '/search/v2/companies';
   const response = await axios({
     url,
@@ -14,23 +14,44 @@ export const getCompetition = async (req, res) => {
     data: {
       filters: {
         and: [
-          {
+          (region || country || city ? {
             attribute: "company_location",
             relation: "equals",
             value: {
-              country: location,
+              ...(region) && { region },
+              ...(country) && { country },
+              ...(city) && { city },
             }
-          },
-          {
+          }: undefined),
+          (industry ? {
             attribute: "company_industry",
             relation: "equals",
             value: industry
-          },
+          } : {}),
         ]
       },
     },
   });
-  console.log(response.data);
+  const obj = {filters: {
+    and: [
+      (region || country || city ? {
+        attribute: "company_location",
+        relation: "equals",
+        value: {
+          ...(region) && { region },
+          ...(country) && { country },
+          ...(city) && { city },
+        }
+      }: undefined),
+      (industry ? {
+        attribute: "company_industry",
+        relation: "equals",
+        value: industry
+      } : {}),
+    ]
+  },}
+  console.log(obj.filters.and);
+  console.log({...response.data});
   return res.status(StatusCodes.OK).json({
     msg: response.data
   });
